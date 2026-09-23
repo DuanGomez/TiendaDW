@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes - Tienda DW</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav id="menu" class="menu"></nav>
+
+  <main class="contenedor">
+
+    <!-- Vista del administrador: listado de clientes -->
+    <section id="seccionAdmin" class="oculto">
+      <h1>Clientes</h1>
+      <p class="subtitulo">Listado de clientes registrados.</p>
+      <div class="tarjeta">
+        <div class="tabla-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody id="tablaClientes"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vista del cliente: su propio perfil -->
+    <section id="seccionPerfil" class="oculto">
+      <h1>Mi perfil</h1>
+      <p class="subtitulo">Estos son tus datos como cliente.</p>
+
+      <div id="avisoDatos" class="aviso oculto">
+        Es tu primer ingreso. Debes completar tus datos antes de realizar una compra.
+      </div>
+
+      <p id="mensaje" class="mensaje"></p>
+
+      <div class="tarjeta">
+        <form id="formCliente" novalidate>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre">
+
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido">
+
+          <label for="correo">Correo</label>
+          <input type="email" id="correo">
+
+          <label for="fecha">Fecha de registro</label>
+          <input type="text" id="fecha" readonly>
+
+          <div class="botones">
+            <button type="submit">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/clientes.js"></script>
+</body>
+</html>

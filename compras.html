@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compras - Tienda DW</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav id="menu" class="menu"></nav>
+
+  <main class="contenedor">
+    <h1 id="titulo">Compras</h1>
+    <p class="subtitulo">Historial de compras realizadas.</p>
+
+    <div class="tarjeta">
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Id compra</th>
+              <th>Cliente</th>
+              <th>Fecha</th>
+              <th>Total</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaCompras"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="seccionDetalle" class="tarjeta oculto">
+      <h2 id="tituloDetalle">Detalle de la compra</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDetalle"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/compras.js"></script>
+</body>
+</html>

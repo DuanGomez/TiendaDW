@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios - Tienda DW</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav id="menu" class="menu"></nav>
+
+  <main class="contenedor">
+    <h1>Usuarios</h1>
+    <p class="subtitulo">Activa las cuentas nuevas y asígnales un rol.</p>
+
+    <p id="mensaje" class="mensaje"></p>
+
+    <div class="tarjeta">
+      <h2>Usuarios pendientes</h2>
+      <p>Selecciona el rol y activa la cuenta.</p>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Correo</th>
+              <th>Rol</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaPendientes"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Todos los usuarios</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Correo</th>
+              <th>Rol</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="tablaUsuarios"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/usuarios.js"></script>
+</body>
+</html>

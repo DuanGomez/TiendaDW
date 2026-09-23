@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Tienda DW</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav id="menu" class="menu"></nav>
+
+  <main class="contenedor">
+    <h1>Productos</h1>
+    <p class="subtitulo">Crea y edita los productos de la tienda.</p>
+
+    <p id="mensaje" class="mensaje"></p>
+
+    <div class="tarjeta">
+      <h2 id="tituloFormulario">Nuevo producto</h2>
+
+      <form id="formProducto" novalidate>
+        <!-- Si tiene un id, se está editando un producto -->
+        <input type="hidden" id="idProducto">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" rows="3"></textarea>
+
+        <label for="valorUnitario">Valor unitario</label>
+        <input type="number" id="valorUnitario" min="1">
+
+        <label for="stock">Stock</label>
+        <input type="number" id="stock" min="0" step="1">
+
+        <div class="botones">
+          <button type="submit" id="btnGuardar">Guardar</button>
+          <button type="button" id="btnCancelar" class="btn-secundario">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Listado de productos</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Valor unitario</th>
+              <th>Stock</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProductos"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/productos.js"></script>
+</body>
+</html>

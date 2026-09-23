@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Tienda DW</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav id="menu" class="menu"></nav>
+
+  <main class="contenedor">
+
+    <!-- Inicio del administrador -->
+    <section id="homeAdmin" class="oculto">
+      <h1>Bienvenido, Administrador</h1>
+      <p class="subtitulo">Este es el resumen de la tienda.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta dato">
+          <span class="circulo coral">U</span>
+          <div>
+            <h3>Usuarios</h3>
+            <p class="numero" id="totalUsuarios">0</p>
+            <p class="pequeno" id="totalPendientes"></p>
+          </div>
+        </div>
+        <div class="tarjeta dato">
+          <span class="circulo azul">C</span>
+          <div>
+            <h3>Clientes</h3>
+            <p class="numero" id="totalClientes">0</p>
+          </div>
+        </div>
+        <div class="tarjeta dato">
+          <span class="circulo verde">P</span>
+          <div>
+            <h3>Productos</h3>
+            <p class="numero" id="totalProductos">0</p>
+          </div>
+        </div>
+        <div class="tarjeta dato">
+          <span class="circulo amarillo">$</span>
+          <div>
+            <h3>Compras</h3>
+            <p class="numero" id="totalCompras">0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inicio del cliente -->
+    <section id="homeCliente" class="oculto">
+      <h1 id="saludoCliente">Bienvenido</h1>
+      <p class="subtitulo">¿Qué quieres hacer hoy?</p>
+
+      <div id="avisoDatos" class="aviso oculto">
+        Debes completar tus datos antes de realizar una compra.
+        <a href="clientes.html">Completar mis datos</a>
+      </div>
+
+      <div class="tarjetas">
+        <a class="tarjeta acceso" href="clientes.html">
+          <span class="circulo azul">P</span>
+          <h3>Mi perfil</h3>
+          <p>Consulta y edita tus datos.</p>
+        </a>
+        <a class="tarjeta acceso" href="compra.html">
+          <span class="circulo coral">$</span>
+          <h3>Comprar</h3>
+          <p>Mira los productos y haz tu compra.</p>
+        </a>
+        <a class="tarjeta acceso" href="compras.html">
+          <span class="circulo verde">C</span>
+          <h3>Mis compras</h3>
+          <p>Revisa las compras que has hecho.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

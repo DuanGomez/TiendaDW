@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra - Tienda DW</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav id="menu" class="menu"></nav>
+
+  <main class="contenedor">
+    <h1>Compra</h1>
+    <p class="subtitulo">Elige los productos y la cantidad que quieres comprar.</p>
+
+    <div id="avisoDatos" class="aviso oculto">
+      Debes completar tus datos antes de realizar una compra.
+      <a href="clientes.html">Completar mis datos</a>
+    </div>
+
+    <div id="avisoProductos" class="aviso oculto">
+      No hay productos disponibles para realizar una compra.
+    </div>
+
+    <p id="mensaje" class="mensaje"></p>
+
+    <div id="zonaCompra" class="oculto">
+      <div id="listaProductos" class="lista-productos"></div>
+
+      <div class="tarjeta">
+        <h2>Resumen de la compra</h2>
+        <div class="tabla-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Valor unitario</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tablaResumen"></tbody>
+          </table>
+        </div>
+
+        <div class="pie-resumen">
+          <p class="total">Total: <span id="total">$0</span></p>
+          <button id="btnConfirmar">Confirmar compra</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/compra.js"></script>
+</body>
+</html>
